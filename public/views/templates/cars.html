@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h2>Add new car</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Name" ng-model="car.name">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Model" ng-model="car.model">
+                </div>
+                <button type="submit" ng-click="addCar(car)" class="btn btn-success">Add Car</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div ng-repeat="car in cars">
+                <p>{{ car.name }}</p>
+                <p>{{ car.model }}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,5 @@
+var Car = require('./models/car.js');
+
 module.exports = function(app) {
 
     // server routes ===========================================================
@@ -5,7 +7,26 @@ module.exports = function(app) {
     // authentication routes
 
     // sample api route
+    // All cars
+    app.get('/api/cars', function(request, response) {
+        Car.find(function(error, cars) {
+            if (error) {
+                response.send(error);
+            }
 
+            response.json(cars);
+        });
+    });
+
+    // Create cars
+
+
+    // Edit car
+
+
+    // Update car
+
+    // Delete car
 
     // frontend routes =========================================================
     // route to handle all angular requests

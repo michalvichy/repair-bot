@@ -1,0 +1,34 @@
+{
+  "name": "Repair bot",
+  "description": "My first full stack spa app",
+  "main": "server.js",
+  "authors": [
+    "Michal Skora"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "mean",
+    "node",
+    "express",
+    "angular",
+    "mongodb"
+  ],
+  "homepage": "https://github.com/michalvichy/repair-bot",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5",
+    "sass-mediaqueries": "~1.6.1",
+    "angular-route": "~1.4.8"
+  }
+}
