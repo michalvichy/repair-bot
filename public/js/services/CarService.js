@@ -1,18 +1,16 @@
 angular.module('CarService', []).factory('Car', ['$http', function($http) {
-    var cars = [
-        {
-            name: 'foobar',
-            model: 'kia'
-        },
-        {
-            name: 'Mazda',
-            model: '323f'
-        }
-    ];
-
     return {
         get: function() {
-            return cars;
+            return $http.get('/api/cars');
+        },
+
+        create: function(car) {
+            return $http.post('/api/cars', car);
+        },
+
+        remove: function(carId) {
+            return $http.delete('/api/cars/' + carId);
         }
+
     }
 }]);

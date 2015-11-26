@@ -3,12 +3,19 @@ var express        = require('express');
 var app            = express();
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
+var mongoose       = require('mongoose');
 
 // configuration ===========================================
 
 // config files
-var db = require('./config/db');
+mongoose.connect('mongodb://localhost/cars')
 
+var db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+    console.log('Db connection: Success');
+});
 // set our port
 var port = process.env.PORT || 8080;
 
@@ -33,7 +40,7 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/public'));
 
 // routes ==================================================
-require('./app/routes')(app); // configure our routes
+require('./app/routes')(app, express); // configure our routes
 
 // start app ===============================================
 // startup our app at http://localhost:8080

@@ -1,3 +1,5 @@
-module.exports = {
-    url : 'mongodb://localhost/stencil-dev'
-}
+// var mongoose = require('mongoose');
+//
+// module.exports = {
+//     mongoose.connect('mongodb://localhost/cars');
+// }
