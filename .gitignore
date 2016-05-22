@@ -3,3 +3,5 @@ bower_components
 vendors
 .sass-cache
 public/css/*
+.idea
+npm-debug.log

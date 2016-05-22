@@ -51,7 +51,7 @@ module.exports = function(app, express) {
 
 
     // Edit car
-
+    router.put('');
 
     // Update car
 
